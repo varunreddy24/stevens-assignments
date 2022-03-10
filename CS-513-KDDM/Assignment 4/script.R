@@ -1,0 +1,59 @@
+#clear all variables
+rm(list=ls())
+
+#load dataset
+dataset<-read.csv('breast-cancer-wisconsin.csv', na.strings = "?")
+
+# Check for Missing values
+
+#number of missing values before removing rows
+sum(is.na(dataset))
+
+#remove missing values
+dataset <- na.omit(dataset)
+
+#number of missing values after removing rows
+sum(is.na(dataset))
+
+#excluding 'sample code number' since we will not be using that column
+dataset <- dataset[,2:11]
+dataset$Class<- factor(dataset$Class , levels = c("2","4") , labels = c("Benign","Malignant"))
+#vector for col names
+cols <- colnames(dataset)
+cols
+
+#data points to factor
+dataset[cols] <- lapply(dataset[cols], factor)
+str(dataset)
+
+
+# Naive Bayes Classifier
+install.packages('e1071',dependencies = TRUE)
+library(class)
+library(e1071)
+
+#splitting training data and testing data - 70-30 split
+index<- sort(sample(nrow(dataset), as.integer(.70*nrow(dataset))))
+train <- data.frame(dataset[index,])
+test <- data.frame(dataset[-index,])
+
+#Naive Bayes classifier
+nb_clf<- naiveBayes(Class ~., data = train)
+
+#fitting classifier
+fit<-predict(nb_clf,test)
+
+#accuracy
+#class labels
+cl <- test[['Class']]
+
+#confusion matrix
+cm = as.matrix(table(Actual = cl, Predicted = fit))
+cm
+
+#accuracy
+accuracy<-sum(diag(cm))/length(cl) 
+accuracy
+
+#clearing all variables
+rm(list=ls())

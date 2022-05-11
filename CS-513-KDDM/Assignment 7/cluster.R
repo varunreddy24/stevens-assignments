@@ -1,0 +1,21 @@
+rm(list=ls())
+mmnorm2<-function(x)
+{
+  z<-((x-min(x))/(max(x)-min(x)))
+  return(z)
+}
+dataset_raw<-read.csv('wisc_bc_ContinuousVar.csv')
+dataset<-data.frame(lapply(na.omit(dataset_raw[,3:31]), as.numeric))
+for( i in colnames(dataset) )
+  dataset[i] = mmnorm2(dataset[i])
+str(dataset)
+dataset<-dist(dataset)
+hclust_result<-hclust(dataset) 
+plot(hclust_result)
+hclust_2<-cutree(hclust_result,2) 
+print(hclust_2)
+plot(hclust_2)
+table(hclust_2,dataset_raw[,2]) 
+k<-2
+kmeans_2<- kmeans(dataset,k,nstart=10)
+table(kmeans_2$cluster,dataset_raw[,2])

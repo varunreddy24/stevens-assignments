@@ -1,0 +1,1683 @@
+{
+  "intents": [
+    {
+      "intent": "check_health",
+      "examples": [
+        {
+          "text": "Assess my heart disease risk"
+        },
+        {
+          "text": "evaluate my heart disease risk"
+        },
+        {
+          "text": "Evaluate my risk of having heart disease"
+        },
+        {
+          "text": "I would like to use the tool to assess my heart disease risk"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "consent",
+      "examples": [
+        {
+          "text": "Check my Health"
+        },
+        {
+          "text": "Giving you a consent"
+        },
+        {
+          "text": "I'm ok with it"
+        },
+        {
+          "text": "No"
+        },
+        {
+          "text": "No problem, let's do it"
+        },
+        {
+          "text": "ready"
+        },
+        {
+          "text": "sure"
+        },
+        {
+          "text": "yes"
+        },
+        {
+          "text": "Yes, I would like to go ahead"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "hi"
+        },
+        {
+          "text": "yes"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "AgeCategory",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "18-24",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "25-29",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "30-34",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "35-39",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "40-44",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "45-49",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "50-54",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "55-59",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "60-64",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "65-69",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "70-74",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "75-79",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "80 or older",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "Alcohol",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "Asthma",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "Diabetic",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "No, borderline diabetes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes (during pregnancy)",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "DiffWalking",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "Elgibility_Result",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "GenHealth",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Excellent",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Fair",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Good",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Poor",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Very good",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "KidneyDisease",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "PhysicalActivity",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "Race",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "American Indian/Alaskan Native",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Asian",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Black",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Hispanic",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Other",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "White",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "Sex",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Female",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Male",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "SkinCancer",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "Smoking",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "Stroke",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ]
+    },
+    {
+      "entity": "sys-currency",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-percentage",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://us-south.functions.appdomain.cloud/api/v1/web/ealay%40stevens.edu_dev/default/getModelPredictionsAction.json",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_1_1651170851804",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Do you experience a difficulty while walking?",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "No"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_5_1651029789357",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1651029789358",
+      "previous_sibling": "handler_9_1651029789358"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1651619006317",
+      "context": {
+        "Asthma": "@Asthma"
+      },
+      "conditions": "@Asthma",
+      "event_name": "input",
+      "dialog_node": "handler_10_1651619006318"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1651622993604",
+      "context": {
+        "MentalHealth": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_10_1651622993605"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Based on my database, do you know that 59.72% of people who had heart disease also had a mental disease? I suggest you consult with a psychologist as soon as possible if you feel depressed, distressed, or anxious. "
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_3_1651622993604",
+      "conditions": "@sys-number < 15",
+      "event_name": "filled",
+      "dialog_node": "handler_10_1651623458666",
+      "previous_sibling": "handler_4_1651622993605"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1651030246924",
+      "context": {
+        "PhysicalActivity": "@PhysicalActivity"
+      },
+      "conditions": "@PhysicalActivity",
+      "event_name": "input",
+      "dialog_node": "handler_1_1651030246926"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Select your physical gender",
+            "options": [
+              {
+                "label": "Male",
+                "value": {
+                  "input": {
+                    "text": "Male"
+                  }
+                }
+              },
+              {
+                "label": "Female",
+                "value": {
+                  "input": {
+                    "text": "Female"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_2_1651618763983",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1651618763984",
+      "previous_sibling": "handler_6_1651618763984"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi! This is myHeart, a virtual assistant that could evaluate your heart disease risk. Would you like to assess your heart health with my unique capabilities?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_1_1651169737141",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1651169737154",
+      "previous_sibling": "handler_5_1651169737154"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1651618119367",
+      "context": {
+        "KidneyDisease": "@KidneyDisease"
+      },
+      "conditions": "@KidneyDisease",
+      "event_name": "input",
+      "dialog_node": "handler_2_1651618119369"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Based on my database, do you know that 32.67% of people who had heart disease are also complicated with diabetics? Diabetics is A group of diseases that result in too much sugar in the blood (high blood glucose). Keeping a healthy dietary habit not only keeps diabetics away but also helps improve heart health."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_5_1651030187386",
+      "conditions": "@Diabetic",
+      "event_name": "filled",
+      "dialog_node": "handler_2_1651619611298",
+      "previous_sibling": "handler_7_1651030187386"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1651622672611",
+      "context": {
+        "PhysicalHealth": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_2_1651622672612"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1651029427536",
+      "context": {
+        "BMI": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_3_1651029427559"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1651029666788",
+      "context": {
+        "SleepTime": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_3_1651029666788"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1651029755188",
+      "context": {
+        "Stroke": "@Stroke"
+      },
+      "conditions": "@Stroke",
+      "event_name": "input",
+      "dialog_node": "handler_3_1651029755189"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Do you have a kidney disease?",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "No"
+                  }
+                }
+              }
+            ],
+            "description": "You are at greater risk for kidney disease if you have diabetes or high blood pressure",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_8_1651618119367",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1651618119369",
+      "previous_sibling": "handler_2_1651618119369"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1651029724500",
+      "context": {
+        "AlcoholDrinking": "@Alcohol"
+      },
+      "conditions": "@Alcohol",
+      "event_name": "input",
+      "dialog_node": "handler_4_1651029724501"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1651030187386",
+      "context": {
+        "Diabetic": "@Diabetic"
+      },
+      "conditions": "@Diabetic",
+      "event_name": "input",
+      "dialog_node": "handler_4_1651030187386"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Select your race",
+            "options": [
+              {
+                "label": "White",
+                "value": {
+                  "input": {
+                    "text": "White"
+                  }
+                }
+              },
+              {
+                "label": "Black",
+                "value": {
+                  "input": {
+                    "text": "Black"
+                  }
+                }
+              },
+              {
+                "label": "Asian",
+                "value": {
+                  "input": {
+                    "text": "Asian"
+                  }
+                }
+              },
+              {
+                "label": "American Indian/Alaskan Native",
+                "value": {
+                  "input": {
+                    "text": "American Indian/Alaskan Native"
+                  }
+                }
+              },
+              {
+                "label": "Hispanic",
+                "value": {
+                  "input": {
+                    "text": "Hispanic"
+                  }
+                }
+              },
+              {
+                "label": "Other",
+                "value": {
+                  "input": {
+                    "text": "Other"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_7_1651618880787",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1651618880790",
+      "previous_sibling": "handler_7_1651618880790"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Please self-evaluate your current health status",
+            "options": [
+              {
+                "label": "Poor",
+                "value": {
+                  "input": {
+                    "text": "Poor"
+                  }
+                }
+              },
+              {
+                "label": "Fair",
+                "value": {
+                  "input": {
+                    "text": "Fair"
+                  }
+                }
+              },
+              {
+                "label": "Good",
+                "value": {
+                  "input": {
+                    "text": "Good"
+                  }
+                }
+              },
+              {
+                "label": "Very good",
+                "value": {
+                  "input": {
+                    "text": "Very good"
+                  }
+                }
+              },
+              {
+                "label": "Excellent",
+                "value": {
+                  "input": {
+                    "text": "Excellent"
+                  }
+                }
+              }
+            ],
+            "description": "Select a status below:",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_9_1651622286236",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1651622286237",
+      "previous_sibling": "handler_5_1651622286237"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Self-evaluate your mental health. Please type a number between 0 to 30. \n0 means I'm depressed or have a mental disease. \n30 means I am mentally strong and healthy. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_3_1651622993604",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1651622993605",
+      "previous_sibling": "handler_10_1651622993605"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1651169737141",
+      "context": {
+        "consent": "#consent"
+      },
+      "conditions": "#consent",
+      "event_name": "input",
+      "dialog_node": "handler_5_1651169737154"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Based on my database, do you know that 53.97% of people who had heart disease also smoke? I suggest you quit smoking to mitigate the risk of having heart disease."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_2_1651029705277",
+      "conditions": "@Smoking:Yes",
+      "event_name": "filled",
+      "dialog_node": "handler_5_1651614054993",
+      "previous_sibling": "handler_7_1651029705278"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1651622286236",
+      "context": {
+        "GenHealth": "@GenHealth"
+      },
+      "conditions": "@GenHealth",
+      "event_name": "input",
+      "dialog_node": "handler_5_1651622286237"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How many hours do you sleep daily?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_10_1651029666788",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1651029666789",
+      "previous_sibling": "handler_3_1651029666788"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1651618763983",
+      "context": {
+        "Sex": "@Sex"
+      },
+      "conditions": "@Sex",
+      "event_name": "input",
+      "dialog_node": "handler_6_1651618763984"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Self-evaluate your physical health. Please type a number between 0 to 30. \n0 means I am physically disabled. \n30 means I am physically strong and healthy. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_7_1651622672611",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1651622672612",
+      "previous_sibling": "handler_2_1651622672612"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What is you body-mass index (BMI)? Body mass index (BMI) is a person’s weight in kilograms divided by the square of height in meters. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1651029427536",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1651029427559",
+      "previous_sibling": "handler_3_1651029427559"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Do you smoke?",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "No"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_2_1651029705277",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1651029705278",
+      "previous_sibling": "handler_9_1651029705278"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Do you have a diabetes?",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "No"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_5_1651030187386",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1651030187386",
+      "previous_sibling": "handler_4_1651030187386"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1651618880787",
+      "context": {
+        "Race": "@Race"
+      },
+      "conditions": "@Race",
+      "event_name": "input",
+      "dialog_node": "handler_7_1651618880790"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Do you have asthma?",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "No"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_3_1651619006317",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1651619006318",
+      "previous_sibling": "handler_10_1651619006318"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Based on my database, do you know that 45.61% of people who had heart disease also had a physical issue? I suggest you participate in outdoor activities more often and join sports clubs to keep your body physically healthy."
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "slot_7_1651622672611",
+      "conditions": "@sys-number < 15",
+      "event_name": "filled",
+      "dialog_node": "handler_7_1651624064698",
+      "previous_sibling": "handler_6_1651622672612"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1651618422925",
+      "context": {
+        "AgeCategory": "@AgeCategory"
+      },
+      "conditions": "@AgeCategory",
+      "event_name": "input",
+      "dialog_node": "handler_8_1651618422928"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Based on my database, do you know that 1.44% of people who had heart disease also drink alcohol? The control of alcohol consumption would be beneficial for your heart health."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_6_1651029724500",
+      "conditions": "@Alcohol:Yes",
+      "event_name": "filled",
+      "dialog_node": "handler_8_1651619371509",
+      "previous_sibling": "handler_9_1651029724501"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1651029705277",
+      "context": {
+        "Smoking": "@Smoking"
+      },
+      "conditions": "@Smoking",
+      "event_name": "input",
+      "dialog_node": "handler_9_1651029705278"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Do you drink alcohol?",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "No"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_6_1651029724500",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1651029724501",
+      "previous_sibling": "handler_4_1651029724501"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Do you have a history of stroke?",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "No"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_10_1651029755188",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1651029755189",
+      "previous_sibling": "handler_3_1651029755189"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1651029789357",
+      "context": {
+        "DiffWalking": "@DiffWalking"
+      },
+      "conditions": "@DiffWalking",
+      "event_name": "input",
+      "dialog_node": "handler_9_1651029789358"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "Are you physically active in your daily life?",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "No"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_8_1651030246924",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1651030246926",
+      "previous_sibling": "handler_1_1651030246926"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "title": "What age group are you in?",
+            "options": [
+              {
+                "label": "18-24",
+                "value": {
+                  "input": {
+                    "text": "18-24"
+                  }
+                }
+              },
+              {
+                "label": "25-29",
+                "value": {
+                  "input": {
+                    "text": "25-29"
+                  }
+                }
+              },
+              {
+                "label": "30-34",
+                "value": {
+                  "input": {
+                    "text": "30-34"
+                  }
+                }
+              },
+              {
+                "label": "35-39",
+                "value": {
+                  "input": {
+                    "text": "35-39"
+                  }
+                }
+              },
+              {
+                "label": "40-44",
+                "value": {
+                  "input": {
+                    "text": "40-44"
+                  }
+                }
+              },
+              {
+                "label": "45-49",
+                "value": {
+                  "input": {
+                    "text": "45-49"
+                  }
+                }
+              },
+              {
+                "label": "50-54",
+                "value": {
+                  "input": {
+                    "text": "50-54"
+                  }
+                }
+              },
+              {
+                "label": "55-59",
+                "value": {
+                  "input": {
+                    "text": "55-59"
+                  }
+                }
+              },
+              {
+                "label": "60-64",
+                "value": {
+                  "input": {
+                    "text": "60-64"
+                  }
+                }
+              },
+              {
+                "label": "65-69",
+                "value": {
+                  "input": {
+                    "text": "65-69"
+                  }
+                }
+              },
+              {
+                "label": "70-74",
+                "value": {
+                  "input": {
+                    "text": "70-74"
+                  }
+                }
+              },
+              {
+                "label": "75-79",
+                "value": {
+                  "input": {
+                    "text": "75-79"
+                  }
+                }
+              },
+              {
+                "label": "80 or older",
+                "value": {
+                  "input": {
+                    "text": "80 or older"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_7_1651618422925",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1651618422928",
+      "previous_sibling": "handler_8_1651618422928"
+    },
+    {
+      "type": "frame",
+      "title": "confirmation",
+      "parent": "node_1_1651170851804",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "BMI": "$BMI",
+            "Sex": "$Sex",
+            "Race": "$Race",
+            "Asthma": "$Asthma",
+            "Stroke": "$Stroke",
+            "Smoking": "$Smoking",
+            "Diabetic": "$Diabetic",
+            "GenHealth": "$GenHealth",
+            "SleepTime": "$SleepTime",
+            "SkinCancer": "No",
+            "AgeCategory": "$AgeCategory",
+            "DiffWalking": "$DiffWalking",
+            "MentalHealth": "$MentalHealth",
+            "KidneyDisease": "$KidneyDisease",
+            "PhysicalHealth": "$PhysicalHealth",
+            "AlcoholDrinking": "$AlcoholDrinking",
+            "PhysicalActivity": "$PhysicalActivity"
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#consent",
+      "dialog_node": "node_10_1651029084571"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Fantastic! Let's evaluate your risk of heart disease. Are you ready for some questions?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_10_1651029084571"
+      },
+      "conditions": "#consent",
+      "dialog_node": "node_1_1651170851804",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "response_condition",
+      "parent": "Welcome",
+      "conditions": "$action_result_3",
+      "dialog_node": "response_2_1651178300022",
+      "previous_sibling": "response_3_1651169737576"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            ""
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "Welcome",
+      "conditions": "anything_else",
+      "dialog_node": "response_3_1651169737576",
+      "previous_sibling": "slot_1_1651169737141"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$webhook_result_1.message"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1651029084571",
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_6_1651029341484",
+      "previous_sibling": "slot_3_1651619006317"
+    },
+    {
+      "type": "response_condition",
+      "parent": "Welcome",
+      "conditions": "$webhook_result_2",
+      "dialog_node": "response_6_1651178342016",
+      "previous_sibling": "response_2_1651178300022"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "I'm sorry your input is not in appropriate format."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_10_1651029084571",
+      "conditions": "anything_else",
+      "dialog_node": "response_7_1651029389873",
+      "previous_sibling": "response_6_1651029341484"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1651029084571",
+      "variable": "$SleepTime",
+      "dialog_node": "slot_10_1651029666788",
+      "previous_sibling": "slot_6_1651029427536"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$Stroke",
+      "dialog_node": "slot_10_1651029755188",
+      "previous_sibling": "slot_8_1651030246924"
+    },
+    {
+      "type": "slot",
+      "parent": "Welcome",
+      "variable": "$consent",
+      "dialog_node": "slot_1_1651169737141"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$Smoking",
+      "dialog_node": "slot_2_1651029705277",
+      "previous_sibling": "slot_10_1651029666788"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$Sex",
+      "dialog_node": "slot_2_1651618763983",
+      "previous_sibling": "slot_7_1651618422925"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$Asthma",
+      "dialog_node": "slot_3_1651619006317",
+      "previous_sibling": "slot_8_1651618119367"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$MentalHealth",
+      "dialog_node": "slot_3_1651622993604",
+      "previous_sibling": "slot_7_1651622672611"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$DiffWalking",
+      "dialog_node": "slot_5_1651029789357",
+      "previous_sibling": "slot_6_1651029724500"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$Diabetic",
+      "dialog_node": "slot_5_1651030187386",
+      "previous_sibling": "slot_10_1651029755188"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1651029084571",
+      "variable": "$BMI",
+      "dialog_node": "slot_6_1651029427536",
+      "previous_sibling": "slot_3_1651622993604"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$AlcoholDrinking",
+      "dialog_node": "slot_6_1651029724500",
+      "previous_sibling": "slot_2_1651029705277"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$AgeCategory",
+      "dialog_node": "slot_7_1651618422925"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$Race",
+      "dialog_node": "slot_7_1651618880787",
+      "previous_sibling": "slot_2_1651618763983"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$PhysicalHealth",
+      "dialog_node": "slot_7_1651622672611",
+      "previous_sibling": "slot_9_1651622286236"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$PhysicalActivity",
+      "dialog_node": "slot_8_1651030246924",
+      "previous_sibling": "slot_5_1651029789357"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$KidneyDisease",
+      "dialog_node": "slot_8_1651618119367",
+      "previous_sibling": "slot_5_1651030187386"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1651029084571",
+      "variable": "$GenHealth",
+      "dialog_node": "slot_9_1651622286236",
+      "previous_sibling": "slot_7_1651618880787"
+    },
+    {
+      "type": "frame",
+      "title": "Welcome",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {},
+          "result_variable": "webhook_result_2"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_1_1651170851804"
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Health Risk Bot-dialog",
+  "language": "en",
+  "description": ""
+}

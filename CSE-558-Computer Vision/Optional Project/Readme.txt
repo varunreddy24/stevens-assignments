@@ -1,2 +1,0 @@
-Please run the code for Image Association as we were not able to include the results because of huge data set size. 
-The results will be stored in their respective folders after execution of Jupyter notebook

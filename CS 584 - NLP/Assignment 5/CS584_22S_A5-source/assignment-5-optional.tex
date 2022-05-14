@@ -1,0 +1,104 @@
+\documentclass{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{color} 
+\usepackage{setspace}
+\usepackage{booktabs} % For formal tables
+\usepackage[linewidth=1pt]{mdframed}
+\usepackage{tcolorbox}
+\usepackage[colorlinks = true,linkcolor = blue,urlcolor=blue]{hyperref}
+\newcommand{\xx}{{\bf{x}}}
+\newcommand{\yy}{{\bf{y}}}
+\newcommand{\ww}{{\bf{w}}}
+
+\pagestyle{headandfoot}
+\runningheadrule
+\firstpageheader{CS584: Natural Language Processing}{Name:        }{\textcolor{red}{Due: April 27, 2022}}
+
+\title{Assignment 5: Dependency Parsing}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{headandfoot}
+
+\begin{center}
+  {\fbox{\parbox{5.5in}{\centering
+Homework assignments will be done individually: each student must hand in their own answers. Use of partial or entire solutions obtained from others or online is strictly prohibited. Electronic submission on Canvas is mandatory.}}}
+\end{center}
+\vspace{.5cm}
+
+% begin questions
+\begin{questions}
+\question{\bf Transition Mechanisms} (60 points)
+\begin{parts}
+
+\part (10 pts) Given a sentence \textit{``I parsed this sentence correctly''} with the transitions, complete the following table. The first three steps are provided in the table, showing the configuration of the stack and buffer, as well as the transition and the new dependency (if has) for the following steps.
+\begin{figure}[h]
+    \centering
+    \includegraphics{example.pdf}
+    % \caption{}
+    \label{fig:example}
+\end{figure}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l | l | l | l}
+    Stack & Buffer & New dependency & Transition \\
+    \hline
+    [ROOT] & [I, parsed, this, sentence, correctly] &  & Initial Configuration  \\\relax
+    [ROOT, I] & [parsed, this, sentence, correctly] & & \textit{SHIFT} \\\relax
+    [ROOT, I, parsed] & [this, sentence, correctly] & & \textit{SHIFT} \\\relax
+    [ROOT, parsed] & [this, sentence, correctly] & parsed $\rightarrow$ I & \textit{LEFT-ARC} 
+    \end{tabular}
+\end{table}
+
+\part (10 pts) A sentence containing n words will be parsed in how many steps (in terms of n)? Briefly explain in 1-2 sentences why.
+
+\part (20 pts) Implement the transition mechanisms, \textit{SHIFT}, \textit{LEFT-ARC}, and \textit{RIGHT-ARC}. (Please check the notebook for the details.)
+\part (20 pts) Implement Minibatch Dependency Parsing based on the follwoing algorithm.
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l}
+    \toprule
+        \textbf{Algorithm}  Minibatch Dependency Parsing\\
+    \midrule
+        \textbf{Input:} \textit{sentences}, a list of sentences to be parsed and model, our model that makes parse decisions \\
+        \\
+        Initialize \textit{partial\_parses} as a list of PartialParses, one for each sentence in \textit{sentences} \\
+        Initialize \textit{unfinished\_parses} as a shallow copy of \textit{partial\_parses} \\
+        \textbf{while} \textit{unfinished\_parses} is not empty \textbf{do} \\
+        ~~~~ Take the first \textit{batch\_size} parses in \textit{unfinished\_parses} as a minibatch \\
+        ~~~~ Use the \textit{model} to predict the next transition for each partial parse in the minibatch \\
+        ~~~~ Perform a parse step on each partial parse in the minibatch with its predicted transition \\ 
+        ~~~~ Remove the completed (empty buffer and stack of size 1) parses from \textit{unfinished\_parses} \\
+        \textbf{end while}
+        \\
+        \textbf{Return:} The \textit{dependencies} for each (now completed) parse in \textit{partial\_parses}.\\
+    \bottomrule
+    \end{tabular}
+\end{table}
+\end{parts}
+
+\question{\bf Neural Networks for Parsing} (40 points)
+\begin{parts}
+
+\part (20 pts) Build your neural network. (Follow the instruction in the notebook. Please \textbf{NOTE} that \textbf{DO NOT} use \textbf{torch.nn.Linear} or \textbf{torch.nn.Embedding} module in your code for this assignment, otherwise you will receive deductions for this problem.)
+\part (20 pts) Train the network and report the Unlabeled Attachment Score (UAS).
+\end{parts}
+
+\end{questions}
+
+
+% End of the questions
+ 
+\noindent{\bf Submission Instructions} 
+You shall submit a zip file named Assignment5\_LastName\_FirstName.zip which contains:
+(Those who do not follow this naming policy will receive penalty points)
+\begin{itemize}
+  \item The Jupyter notebook which includes all your code and the output of each cell.
+  \item A pdf file contains all your solutions for 1.(a) and 1.(b).
+\end{itemize}
+
+
+\end{document}
